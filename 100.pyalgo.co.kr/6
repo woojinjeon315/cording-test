@@ -14,7 +14,7 @@ def solution(data):
     
     return e
 
-solution('1q2w3e4r')
+solution('')
 
 ###
 
@@ -22,7 +22,11 @@ def solution(data):
     w = 0
     e = 0
 
-    for x in (data): 
+def solution(data):
+    w = 0
+    e = 0
+
+    while w < len(data): 
         if data[w].isdigit() == True: 
             e += int(data[w]) 
             w += 1 
@@ -32,4 +36,4 @@ def solution(data):
     
     return e
 
-solution('1q2w3e4r')
+solution('')
