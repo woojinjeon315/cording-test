@@ -1,0 +1,12 @@
+def solution(data):
+
+    x =(str(data))
+    y = x.count('1')
+
+    return y
+
+solution([])
+
+
+# x =(str(data)) 를 이용해 data를 문자열로 바꾸고 x로 할당합니다.
+# y = x.count('1') 를사용해 문자열 x의 1의개수를 구하고 y로 할당합니다
