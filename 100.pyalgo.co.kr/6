@@ -62,3 +62,17 @@ solution('1q2w3e4r')
 # True일 경우 w에 1을 더합니다
 # else: 그렇지 않을때
 # w 에 1을 더합니다
+
+
+
+def solution(data):
+
+    y = 0
+     
+    for x in (data):
+        if data.isdigit() == True:
+            y += x
+    
+    return y
+
+solution('1hel2lo3'	)
