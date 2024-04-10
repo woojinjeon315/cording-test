@@ -20,9 +20,9 @@ solution([3, 5, 7, 1])
 
 def solution(data):
 
-y = sum(filter(lambda x: not(x % 3 == 0 or x % 5 == 0), data))
+    y = sum(filter(lambda x: not(x % 3 == 0 or x % 5 == 0), data))
 
-return y
+    return y
 
 solution([3, 5, 7, 1])
 
