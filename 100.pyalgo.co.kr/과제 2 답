@@ -3,9 +3,9 @@
 
 def solution(data):
 
-y =  sum(filter(lambda x: x % 2 == 1, data)) 
+    y =  sum(filter(lambda x: x % 2 == 1, data)) 
 
-return y
+    return y
 
 solution([3, 5, 7, 1])
 
