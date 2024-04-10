@@ -1,0 +1,91 @@
+1번
+문제요약 : 주어진 리스트 내에 홀수를 찾아 합을 반환하는 solution 함수를 완성해주세요.
+
+def solution(data):
+
+y =  sum(filter(lambda x: x % 2 == 1, data)) 
+
+return y
+
+solution([3, 5, 7, 1])
+
+#(lambda x: x % 2 == 1, data)를 사용해 리스트안에 있는값중 2로 나눕니다.
+#filter을 사용해 2로 나누었을떄 나머지가 1인 홀수들을 찾습니다.
+#sum을 사용해 홀수들을 더합니다.
+
+
+2번
+문제요약 : 주어진 리스트에서 3과 5의 배수를 제외한 모든 수를 더하는 solution 함수를 완성해주세요.
+
+
+def solution(data):
+
+y = sum(filter(lambda x: not(x % 3 == 0 or x % 5 == 0), data))
+
+return y
+
+solution([3, 5, 7, 1])
+
+#(x % 3 == 0 or x % 5 == 0)를 이용해 3또는5로 나누었을때 0이되는 값을 True로 만듭니다.
+#not를 붙여 3또는5로 나눈값을 False 로 만듭니다.
+#filter를 사용해 True 값을 고릅니다.
+#sum을 사용해 True값을 더합니다.
+
+
+3번
+문제요약 : 주어진 리스트의 값 중 1의 갯수를 반환하는 solution 함수를 완성해주세요.
+
+def solution(data):
+
+    x =(str(data))
+    y = x.count('1')
+
+    return y
+
+solution([])
+
+# x =(str(data)) 를 이용해 data를 문자열로 바꾸고 x로 할당합니다.
+# y = x.count('1') 를사용해 문자열 x의 1의개수를 구하고 y로 할당합니다
+
+
+4번 
+문제요약 : 주어진 문자열의 숫자를 모두 더하는 solution 함수를 완성해주세요.
+
+def solution(data):
+
+    w = 0
+    e = 0
+
+    while w < len(data): 
+        if data[w].isdigit() == True: 
+            e += int(data[w]) 
+            w += 1 
+        else: 
+            w += 1
+    
+    return e
+
+solution('1q2w3e4r')
+
+# 변수 w와e를 0으로 만듭니다
+# while w < len(data): 를 사용해 w가 문자의길이 len(data)보다 작을때까지 반복합니다
+# if data[w].isdigit() == True: 으로 만약 data의 w 번째의 글자가 숫자인지 isdigit으로 판별하고 숫자일경우 True로 판정합니다
+# True일 경우 e에 data[w]의값을 정수로 변환해 더합니다
+# True일 경우 w에 1을 더합니다
+# else: 그렇지 않을때
+# w 에 1을 더합니다
+
+
+5번
+문제요약 :  리스트 안에 업무 이름과 업무 우선순위가 함께 주어졌을 때 오름차순 업무 우선순위에 따라 업무 이름을 출력해주세요.
+
+def solution(data):
+
+    y = sorted(data, key=lambda x: x[1])
+    
+    return y
+
+solution([['A', 3], ['B', 1], ['C', 2]])
+
+# key=lambda x: x[1] 를 사용해 정렬기준을 매게변수 x릐 2번쨰 값으로 지정합니다.
+# sorted를 사용해 정렬합니다.
