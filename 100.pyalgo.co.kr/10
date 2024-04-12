@@ -3,3 +3,11 @@ b=[['Gray', 98, 92, 85, 97], ['Gom', 98, 30, 21, 60], ['Allosa', 98, 90, 99, 98]
 
 if (a, key=lambda x: x[1])+(a, key=lambda x: x[2])+(a, key=lambda x: x[3])+(a, key=lambda x: x[4]) =< 360
     print(1)
+
+a=[['Licat', 98, 92, 85, 97], ['Mura', 95, 32, 51, 30], ['Binky', 98, 98, 51, 32]]
+w=0
+s=0
+while w < 3:
+    s = a[w][1]+ a[w][2]+ a[w][3]+ a[w][4]
+    w += 1
+s
