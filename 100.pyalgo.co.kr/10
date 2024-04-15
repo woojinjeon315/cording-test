@@ -11,3 +11,11 @@ while w < 3:
     s = a[w][1]+ a[w][2]+ a[w][3]+ a[w][4]
     w += 1
 s
+
+for i in data:
+    if (i[1]+i[2]+i[3]+i[4])>=350
+        print(i[0])
+
+for i in data:
+    if sum(i[1:]) >= 350
+        print(i)
