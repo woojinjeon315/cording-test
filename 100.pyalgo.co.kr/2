@@ -14,3 +14,29 @@ for s in data:
     #print(x)
     print(z)
 print(y)
+
+
+def solution(data):
+    s=1
+    
+    
+    if data==[]:
+        s *= 0
+
+
+    else :
+
+        for i in data:
+            if not(i==0):
+                s *= i
+                print(11)
+
+
+            else :
+                s *= 0
+                print(33)
+
+
+    return s
+
+solution([3, 5, 7, 1])
