@@ -4,3 +4,29 @@ for i in s[1]:
     # print(i)
     print(s[1][i])
     sorted(s[1][i],s[] 
+
+s = [['제주시 A동 한라산길 61', '제주시 B동 백록담길 63', '제주시 C동 사라봉길 31'], {'A동': 63007, 'B동': 63010, 'C동': 63002}]
+
+q = s[0]
+w = s[1]
+e = []
+a = 0
+
+for a in s[0]:
+    s[0][a] = s[1][a]
+    a+=1
+    print(a)
+
+print(w)
+# print(sorted[w['A동'],w['B동'],w['C동']])
+
+# for i in w.keys():
+#     print(i)
+for i in (w.keys()):
+    print(i)
+    print(s[1][i])
+
+    e.append(w[i])
+print(e)
+sorted(e)
+    # e.append(w[i])
