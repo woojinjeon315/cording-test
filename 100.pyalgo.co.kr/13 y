@@ -1,0 +1,8 @@
+def solution(data):
+    
+    y = (sorted(data[0],key = lambda x :data[1][x],reverse = False))
+    
+    return y
+
+
+solution([['Moby Dick', 'To Kill a Mockingbird', '1984'], {'Moby Dick': 1851, 'To Kill a Mockingbird': 1960, '1984': 1949}])
