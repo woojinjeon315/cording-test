@@ -30,3 +30,11 @@ for i in (w.keys()):
 print(e)
 sorted(e)
     # e.append(w[i])
+
+
+s = [['제주시 A동 한라산길 61', '제주시 B동 백록담길 63', '제주시 C동 사라봉길 31'], {'A동': 63007, 'B동': 63010, 'C동': 63002}]
+q = s[0]  # 문자열이 담긴 리스트
+q_split = [x.split() for x in q]  # 문자열을 공백을 기준으로 분리한 리스트
+print(sorted(q_split, key=lambda x: x[1]))  # 분리된 리스트를 두 번째 요소를 기준으로 정렬
+(sorted(s[0][(q_split, key=lambda x: x[1])]))  # 분리된 리스트를 두 번째 요소를 기준으로 정렬
+
