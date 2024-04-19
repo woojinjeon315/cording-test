@@ -1,0 +1,24 @@
+s={'AX21': 'Moby Dick', 'BX32': '1984', 'CX14': 'To Kill a Mockingbird','AA11':'KKK'}
+
+e=[]
+# s['AX21']
+# sorted(key=lambda s.keys)
+a=sorted((
+
+s.keys()
+
+))
+
+# s[a[1]]
+
+# sorted(s,keys = lambda x : (s.keys()))
+
+
+for i in a:
+    # print(i)
+    print(s[i])
+    e.append(s[i])
+# print(sorted(s,key = lambda x : s))
+
+
+e
