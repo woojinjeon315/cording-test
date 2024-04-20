@@ -27,3 +27,26 @@ def solution(data):
 
 
 solution(['03/25/2021', '2020.12.31', '15-04-2022'])
+
+#split 풀이
+#gpt답
+
+def solution(data):
+    formatted_dates = []
+
+    for date in data:
+        if '-' in date:
+            year, month, day = date.split('-')
+        elif '/' in date:
+            month, day, year = date.split('/')
+        elif '.' in date:
+            year, month, day = date.split('.')
+        
+        formatted_date = year + '/' + month.zfill(2) + '/' + day.zfill(2)
+        formatted_dates.append(formatted_date)
+    
+    return sorted(formatted_dates)
+
+# 테스트
+print(solution(['20-01-2024', '12/15/2023', '2022.05.30']))
+print(solution(['03/25/2021', '2020.12.31', '15-04-2022']))
