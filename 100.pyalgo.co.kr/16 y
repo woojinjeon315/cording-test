@@ -1,0 +1,29 @@
+def solution(data):
+
+
+    a=[]
+
+
+    for i in data:
+
+
+        if i.count('-') > 0:
+            a.append(i[6:10]+('/')+i[3:5]+('/')+i[0:2])
+
+
+        elif i.count('.') > 0:
+            i=i.replace('.','/')
+            a.append(i)
+
+
+        elif i.count('/') > 0:
+            a.append(i[6:10]+('/')+i[0:5])
+
+
+    y=sorted(a)
+
+
+    return y
+
+
+solution(['03/25/2021', '2020.12.31', '15-04-2022'])
