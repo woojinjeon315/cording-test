@@ -1,0 +1,14 @@
+def solution(data):
+    
+
+    y=[]
+
+
+    for i in data:
+        y.append(type(i))
+    
+
+    return y
+
+
+solution([123, 4.56, 'hello', [1, 2, 3], (4, 5), {'a': 1, 'b': 2}])
