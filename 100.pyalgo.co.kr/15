@@ -1,4 +1,26 @@
-s = ['01:00 PM', '11:30 AM', '12:45 PM', '09:00 AM', '12:00 AM']
+def solution(data):
 
-for i in s:
-    print(i[0:5].split(':')+(i[6:]))
+
+    a=[]
+    b=[]
+    y=[]
+
+
+    for i in data:
+        if 'AM'==i[-2:]:
+            a.append(i)
+
+        elif 'PM' == i[-2:]:
+            b.append(i)
+
+
+    c=sorted(a)
+    d=sorted(b)
+    # print(a+b)
+    y=(c+d)
+
+
+    return y
+
+
+solution(['01:00 PM', '11:30 AM', '12:45 PM', '09:00 AM', '12:00 AM'])
