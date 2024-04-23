@@ -1,0 +1,33 @@
+def solution(data):
+
+    t=[]
+    p=[]
+
+    for i in a:
+        for y in i:
+            t.append(y)
+    timesort=sorted(t)
+    timesort[:3]
+
+    for u in timesort[:3]:
+        YYYY, MM, DD = u.split('-')
+        YY = YYYY[2:4]
+
+        if u in s['월']:
+            p.append(u + '월')
+        elif u in s['화']:
+            p.append(u + '화')
+        elif u in s['수']:
+            p.append(u + '수')
+        elif    u in s['목']:
+            p.append(u + '목')
+        elif u in s['금']:
+            p.append(u + '금')
+
+    return p
+
+solution({'월': ['2024-01-01', '2024-01-08', '2024-01-15', '2024-01-22'], 
+          '화': ['2024-01-02', '2024-01-09', '2024-01-16'], 
+          '수': ['2024-01-03', '2024-01-10'], 
+          '목': ['2024-01-04', '2024-01-11', '2024-01-18'], 
+          '금': ['2024-01-05', '2024-01-12', '2024-01-19', '2024-01-26']})
