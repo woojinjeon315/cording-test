@@ -1,0 +1,20 @@
+def solution(data):
+
+    a=[]
+    l=[]
+
+    a=sorted(data.values(), reverse=True)[:3]
+    
+    for i in a:
+
+        for o in data:
+
+            if data[o] == i:
+                YYYY,MM,DD = o.split('-')
+                YY = YYYY[2:]
+                p = YY + '-' + MM + '-' + DD + ': ' + str(data[o])
+                l.append(p) 
+
+    return l
+
+solution({'2024-01-01': 15, '2024-01-02': 17, '2024-01-03': 16, '2024-01-04': 20, '2024-01-05': 19, '2024-01-06': 21, '2024-01-07': 18})
