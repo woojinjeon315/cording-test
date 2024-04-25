@@ -1,0 +1,16 @@
+def solution(data):
+
+    q=0
+
+    for i in data[0]:
+        if i == data[-1]:
+            print(q)
+        q += 1
+
+    if data[0].count(data[-1]) == 0:
+        print('False')
+
+
+    return None
+
+solution(([2, 4, 6, 8, 10], 7))
