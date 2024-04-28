@@ -13,3 +13,23 @@ while s < 10:
     # print(s)
     s += 1
 print(g)
+
+s = 10
+a=1
+g=[2]
+
+for i in range(10):
+    while a < i:
+        # print(i)
+        # print(a)
+        if not(i % a == 0):
+            print(a)
+            # print(s)
+            g.append((i))
+
+
+        a += 1
+    a=2
+
+u=(sorted(list(set(g))))
+print(u)
