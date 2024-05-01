@@ -33,3 +33,35 @@ for i in range(10):
 
 u=(sorted(list(set(g))))
 print(u)
+
+
+
+s = 10
+a=1
+g=[2]
+
+for i in range(1,1001):
+    while a +1 < i:
+        # print(i)
+        # print(a)
+        if (i % a == 0):
+            # print(i)
+            # print(s)
+            g.append((i))
+
+
+        a += 1
+    a=2
+
+
+
+o=[]
+u=(sorted(list(set(g))))
+for v in range(1,1001):
+    o.append(v)
+
+
+for k in u:
+    o.remove(k)
+
+print(o)
