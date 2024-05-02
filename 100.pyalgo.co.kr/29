@@ -1,0 +1,7 @@
+s=[4, 1, 2, 1, 2]
+
+for i in s:
+    a=s.count(i)
+    # print(i)
+    print(a)
+a
