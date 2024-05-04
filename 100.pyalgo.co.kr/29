@@ -5,3 +5,12 @@ for i in s:
     # print(i)
     print(a)
 a
+
+def solution(data):
+
+for i in data:
+    if data.count(i)==1:
+
+    return i
+
+solution()
