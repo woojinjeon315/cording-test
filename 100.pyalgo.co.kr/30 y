@@ -1,0 +1,9 @@
+def solution(data):
+
+    a=bin(data)[2:].replace('1','A').replace('0','B')
+
+    return a
+
+print(solution(5))
+print(solution(9))
+print(solution(10))
