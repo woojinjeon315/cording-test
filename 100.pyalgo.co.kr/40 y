@@ -1,0 +1,17 @@
+def solution(data):
+
+    datafa=[]
+    an = ('"""')
+
+    for dataf in list(data):
+        if dataf.isdigit():
+            datafa.append(dataf)
+
+    datafaj=''.join(datafa)
+    last = ('"')+(datafaj)+('"')
+
+    return print(last)
+
+solution("가격은 3,500원입니다.")
+solution("오늘은 2023년 3월 5일")
+solution("문자만 있는 경우")
