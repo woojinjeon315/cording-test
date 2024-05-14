@@ -1,0 +1,63 @@
+###
+#리스트 안에값 비트화 후 리스트 대임
+
+def solution(data):
+
+    d = -1
+    data2=[]
+    for dataf in data :
+        datafb=bin(dataf)[2:]
+        # print(datafb)
+        data2.append(datafb)
+    return(data2)
+
+
+    # for data2f in data2:
+    #     print(data2f[d])
+    #     d += -1
+
+
+print(solution([12, 5, 6]))
+print(solution([7, 14, 3]))
+
+###
+#가장 큰 비트의 자릿수 구하기
+
+s=['1100', '101', '110']
+p=[]
+for o in s:
+    p.append(len(o))
+    sp=sorted(set(p))
+
+    print(sp)
+    print(sp[-1])
+
+###
+# 비트연
+
+# s=['1100', '101', '110']
+
+s=['123','456','789']
+g=[]
+# y=
+c = -1
+h = -4
+
+
+while -c == h:
+    for i in s:
+        print(i[c])
+        g.append(i[c])
+        # print(i[c])
+    c += -1
+
+
+
+# if '0' in g:
+#    y = 0
+
+# else: 
+#     y=1
+
+# print(y)
+    
