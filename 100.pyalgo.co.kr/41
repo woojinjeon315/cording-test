@@ -1,0 +1,26 @@
+def solution(data):
+
+    a=0
+    def s1(data):
+        if not((data.count('(') == data.count(')')) and (data.count('[') == data.count(']')) and (data.count('{') == data.count('}'))):
+            return False
+
+
+    def s2(data):
+
+    
+    # while a<=len(data):
+
+    
+        if data[a] == data[-a]:
+            print('A')
+    
+    answer 
+    return print(answer)
+
+
+
+solution("{[()()]}")
+solution("[(])")
+solution("({[]})")
+solution("({[}])")	
