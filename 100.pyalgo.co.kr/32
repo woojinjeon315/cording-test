@@ -61,3 +61,5 @@ while -c == h:
 
 # print(y)
     
+#& 비트연산 and
+#| 비트연산 or
