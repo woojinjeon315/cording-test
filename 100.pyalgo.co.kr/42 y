@@ -1,0 +1,15 @@
+def solution (data):
+    answersize = data['size']
+    answer = []
+
+    for i in data['requests']:
+        answer.append(i)
+
+        if len(answer) > answersize:
+            answer.pop(0)
+    
+    return answer
+
+print(solution({'size': 3, 'requests': ['A', 'B', 'C', 'D']}))
+print(solution({'size': 2, 'requests': ['X', 'Y', 'Z']}))
+print(solution({'size': 1, 'requests': ['P', 'Q', 'R']}))
