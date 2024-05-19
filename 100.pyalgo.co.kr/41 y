@@ -51,3 +51,50 @@ else:
         print("균형 잡힘")
     else:
         print("불균형")
+
+def solution(data):
+
+    a=0
+    def s1(data):
+        if not((data.count('(') == data.count(')')) and (data.count('[') == data.count(']')) and (data.count('{') == data.count('}'))):
+            return False
+
+        else :
+            return True
+
+
+    def s2(data):
+        st = []
+        for df in data:
+            if df == ('('):
+                st.append('q')
+            if df == ('{'):
+                st.append('w')
+            if df == ('['):
+                st.append('e')
+
+            if df == (')'):
+                if st[-1] == ('q'):
+                    st.pop(-1)
+            if df == ('}'):
+                if st[-1] == ('w'):
+                    st.pop(-1)
+            if df == (']'):
+                if st[-1] == ('e'):
+                    st.pop(-1)
+
+        if (len(st) == 0):
+            return True
+
+        else:
+            return False
+
+    answer = s1(data) and s2(data)
+    return answer
+
+
+
+solution("{[()()]}")
+solution("[(])")
+solution("({[]})")
+solution("({[}])")
