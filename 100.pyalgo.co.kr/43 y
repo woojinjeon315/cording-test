@@ -1,0 +1,16 @@
+def solution (data):
+
+    answersize = data['size']
+    answer = []
+
+    for df in data['pages']:
+        answer.append(df)
+
+        if len(answer) -1 >= answersize:
+            answer.pop(0)
+
+    return answer
+
+print(solution({'size': 3, 'pages': ['page1', 'page2', 'page3', 'page2', 'page4']}))
+print(solution({'size': 2, 'pages': ['pageA', 'pageB', 'pageC']}))
+print(solution({'size': 4, 'pages': ['pageX', 'pageY', 'pageZ', 'pageX', 'pageW']}))
