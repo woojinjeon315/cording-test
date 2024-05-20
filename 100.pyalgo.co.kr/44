@@ -1,0 +1,30 @@
+def solution(data):
+
+    keys = []
+    values = []
+
+    # for df in data:
+    #     if not(data.isalpha()):
+    #         print('a')
+
+
+    data.lower()
+    datas=data.split()
+
+    for dsf in datas:
+        keys.append(dsf)
+
+    for kf in keys:
+        
+
+    
+    answer = dict(zip(keys, values))
+
+    
+
+    return answer
+
+
+# print(solution("Hello world, hello"))
+print(solution("The quick brown fox"))
+print(solution("One one one two"))
