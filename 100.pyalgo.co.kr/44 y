@@ -1,0 +1,39 @@
+def solution(data):
+
+    keys = []
+    values = []
+    keysr = []
+
+    # for df in data:
+    #     if not(data.isalpha()):
+    #         print('a')
+
+    datare=data.replace(',',' ')
+
+    keys = []
+    values = []
+    datal=datare.lower()
+    datas=datal.split()
+
+    for dsf in datas:
+        keys.append(dsf)
+
+    for o in keys:
+        if o not in keysr:
+            keysr.append(o)
+
+    for kf in keysr:
+        # print(kf)
+        # print(keys.count(kf))
+        values.append(keys.count(kf))
+
+    adict = dict(zip(keysr, values))
+    
+    answer = adict
+
+    return answer
+
+
+print(solution("Hello world, hello"))
+print(solution("The quick brown fox"))
+print(solution("One one one two"))
