@@ -1,0 +1,75 @@
+
+class Super:
+    def __init__(self):
+        self.name
+
+    def solution(data):
+
+
+
+
+
+
+
+    return data
+
+
+
+
+
+# 라이캣은 편의점에서 1만원으로 아이스크림을 살 예정입니다. 모든 아이스크림은 7백원입니다. 아이스크림 사는 갯수에 따라 최소 갯수의 잔돈을 리스트로 출력하세요.
+#입력 (아이스크림 개수)	출력 (거스름돈 리스트: [만원, 오천원, 천원, 오백원, 백원])
+print(solution(2))	#[0, 1, 3, 1, 1]
+print(solution(3))	#[0, 1, 2, 1, 4]
+print(solution(10))	#[0, 0, 3, 0, 0]
+
+
+###
+
+
+def solution(data):
+
+    m10000 = 0
+    m5000 = 0
+    m1000 = 0
+    m500 = 0
+    m100 = 0
+
+
+    money = 10000
+    icecream = 700
+
+    anther_money = money - (data * icecream)
+
+    while anther_money >= 10000:
+        anther_money -= 10000
+        m10000 += 1
+        # print(anther_money)
+
+    while anther_money >= 5000:
+        anther_money -= 5000
+        m5000 += 1
+        # print(anther_money)
+
+    while anther_money >= 1000:
+        anther_money -= 1000
+        m1000 += 1
+        # print(anther_money)
+
+    while anther_money >= 500:
+        anther_money -= 500
+        m500 += 1
+        # print(anther_money)
+
+    while anther_money >= 100:
+        anther_money -= 100
+        m100 += 1
+        # print(anther_money)
+
+    # if anther_money = 0:
+        #print(anther_money)
+    #     pass
+
+    result = [m10000, m5000, m1000, m500, m100]
+
+    return result
