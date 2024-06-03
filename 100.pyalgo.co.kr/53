@@ -1,1 +1,19 @@
+def solution(data):
 
+    dict_keys = []
+    dict_values = []
+    money = data[-1]
+
+    for df in data[0]:
+    
+        if df.isdigit()
+        dict_keys.append
+
+
+
+
+
+
+print(solution([(200000, 'A기업'), (300000, 'B기업'), (400000, 'C기업')], 500000)) # ['A기업', 'B기업'])
+print(solution([(100000, 'A기업'), (200000, 'B기업'), (300000, 'C기업')], 500000)) # ['A기업', 'B기업'])
+print(solution([(50000, 'A기업'), (70000, 'B기업'), (120000, 'C기업')], 180000)) # ['A기업', 'B기업'])
