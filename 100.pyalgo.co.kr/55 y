@@ -1,0 +1,15 @@
+def solution(data):
+
+    mine_c = []
+
+    for df in data:
+        dfc = (df.count(1))
+        mine_c.append(dfc)
+
+    mine_cs = sum(mine_c)
+
+    return mine_cs
+
+
+print(solution([[0, 1, 0], [1, 0, 1], [0, 1, 0]]))	#4
+print(solution([[1, 1], [0, 0]]))	#2
