@@ -18,3 +18,56 @@ def solution(data):
 print(solution([(200000, 'A기업'), (300000, 'B기업'), (400000, 'C기업')], 500000)) # ['A기업', 'B기업'])
 print(solution([(100000, 'A기업'), (200000, 'B기업'), (300000, 'C기업')], 500000)) # ['A기업', 'B기업'])
 print(solution([(50000, 'A기업'), (70000, 'B기업'), (120000, 'C기업')], 180000)) # ['A기업', 'B기업'])
+
+
+###
+
+
+def solution(data):
+
+
+    def s1(data):
+
+        dict_keys = []
+        dict_values = []
+        money = data[-1]
+
+        for df in data[0]:
+            dict_keys.append(df[1])
+
+
+        for df in data[0]:
+            dict_values.append(df[0])
+
+        dict_c = dict(zip(dict_keys, dict_values))
+
+        # print(dict_keys)
+        # print(dict_values)
+        # print(dict_c)
+
+        return dict_c
+
+
+
+    dict_com = s1(data)
+    print(dict_com.keys())
+
+
+    def s2(data):
+        print(dict_com)
+        print('aaa')
+        # print(dict_com.values())
+        
+    
+    return s2(data)
+
+    # print(dict_com(keys))   
+    # return s1(data)
+    # return dict_keys
+
+
+
+
+print(solution(([(200000, 'A기업'), (300000, 'B기업'), (400000, 'C기업')], 500000))) # ['A기업', 'B기업'])
+# print(solution(([(100000, 'A기업'), (200000, 'B기업'), (300000, 'C기업')], 500000))) # ['A기업', 'B기업'])
+# print(solution(([(50000, 'A기업'), (70000, 'B기업'), (120000, 'C기업')], 180000))) # ['A기업', 'B기업'])
