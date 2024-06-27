@@ -1,0 +1,10 @@
+def solution(data):
+
+    answer = ''
+    c = 0
+    for di in (data):
+        c += +1
+        if '.' in di:
+            answer = data[c:]
+
+    return answer
