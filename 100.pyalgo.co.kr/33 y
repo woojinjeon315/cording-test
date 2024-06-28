@@ -1,0 +1,14 @@
+def solution(data):
+    import re 
+    pattrn = r'([a-zA-Z\._+]{1,128})(@)([a-zA-Z-.]{1,128})([.]{1})([com]{2,3})'
+
+
+    if re.match(pattrn, data):
+        return True
+    else:
+        return False
+
+print(solution('user@example.com'))	#True
+print(solution('user.name@domain.co'))	#True
+print(solution('user@domain'))	#False
+print(solution('@example.com'))	#False
