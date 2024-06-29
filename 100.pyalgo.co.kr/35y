@@ -1,0 +1,11 @@
+def solution(data):
+
+    import re
+    pat = r'<([a-zA-z/]{0,100})>'
+
+    return re.sub(pat,'', data)
+
+
+print(solution("<p>Hello, <b>World</b>!</p>"))	#"Hello, World!"
+print(solution("<div><i>Sample</i> Text</div>"))	#"Sample Text"
+print(solution("No tags here."))	#"No tags here."
