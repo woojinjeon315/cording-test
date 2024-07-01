@@ -37,3 +37,20 @@ def solution(data):
 print(solution("Hello world, hello"))
 print(solution("The quick brown fox"))
 print(solution("One one one two"))
+
+
+###
+
+
+def solution(data):
+
+    import re
+
+    pat = re.compile(r'(\d)')
+    
+    fin_data = re.findall(pat, data)
+
+    result = "".join(fin_data)
+
+    return result
+    # return fin_data
