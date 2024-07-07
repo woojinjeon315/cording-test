@@ -1,0 +1,53 @@
+def solution(data):
+
+
+    import re
+
+
+    def protocol(data):
+
+        protocol_p = re.compile(r'([a-zA-Z]{1,10})')
+        protocol_search = re.search(protocol_p, data)
+
+        return protocol_search.group(1)
+
+
+    def domain(data):
+
+        domain_p = re.compile(r'([wwwftp][a-zA-Z.]{5,64})')
+        domain_search = re.search(domain_p, data)
+
+        return domain_search.group(1)
+
+
+    def path(data):
+    
+        path_p = re.compile(r'/(?P<type>path|folder)(/[a-zA-Z0-9./]*)?')
+        path_search = re.search(path_p, data)
+
+        if path_search:
+            return path_search.group(0)
+        else :
+            return ''
+
+            
+    def query(data):
+    
+        query_p = re.compile(r'\?([a-zA-Z.\=\&\d]{0,32})')
+        query_search = re.search(query_p, data)
+
+        if query_search:
+            return query_search.group(1)
+        else :
+            return ''
+
+
+    def make_dict(protocol, domain, path, query):
+        
+        made_dict = {'protocol': protocol, 'domain': domain, 'path': path, 'query': query}
+        
+        return made_dict
+
+
+    return make_dict(protocol(data), domain(data), path(data), query(data))
+
