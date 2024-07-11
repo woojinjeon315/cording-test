@@ -1,0 +1,19 @@
+def solution(data):
+
+    condition = data[-1]
+    not_True_count = 0
+    
+    for dataf in data[0]:
+        for dataff in dataf:
+            if not(dataff % condition == 1):
+                not_True_count += 1
+
+    if not_True_count > 0:
+        return True
+    else:
+        return False
+
+
+print(solution([[[2, 4, 6], [8, 10, 12]], 2]))# == True)
+print(solution([[[1, 2, 3], [4, 5, 6]], 1]))# == True)
+print(solution([[[1, 3, 5], [7, 9, 11]], 2]))# == False)
