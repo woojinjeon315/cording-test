@@ -1,0 +1,22 @@
+def solution(data):
+
+    max = data[-1][1]
+    min = data[-1][0]
+    filtering_data = []
+
+    for dataf in data[0]:
+        for dataff in dataf:
+            if max >= dataff >= min:
+                filtering_data.append(dataff)
+
+    sorted_flitering_data = sorted(filtering_data)
+    answer = (sorted_flitering_data[-1],sorted_flitering_data[0])
+
+    return answer
+
+
+
+print(solution([[[1, 2, 3], [4, 5, 6], [7, 8, 9]], (3, 7)]))      # == (7, 3)
+print(solution([[[10, 21], [32, 45]], (20, 40)]))       # == (32, 21))
+print(solution([[[-5, -3, 2], [0, 4, 6]], (0, 5)]))        # == (4, 0))
+print(solution([[[100, 200, 300], [400, 500, 600]], (250, 550)]))       # == (500, 300))
