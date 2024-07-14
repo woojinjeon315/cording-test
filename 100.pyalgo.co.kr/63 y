@@ -1,0 +1,26 @@
+def solution(data):
+
+    condition = data[-1]
+    word = data[0]
+    word_lens = len(word)
+    word_turn = 0
+    answer = []
+
+
+    if word_lens < condition:
+        return []
+
+    elif word_lens >= condition:
+        while word_turn + condition <= word_lens:
+            answer.append(word[word_turn : word_turn + condition])
+            word_turn += 1
+
+    return answer
+
+print(solution(['hello', 2]))            # == ['he', 'el', 'll', 'lo'])
+print(solution(['world', 3]))      # == ['wor', 'orl', 'rld'])
+# print(solution(['python', 5]))               # == ['pytho', 'ython'])
+# print(solution(['data', 1]))           # == ['d', 'a', 't', 'a'])
+# print(solution(['algorithm', 4]))               # == ['algo', 'lgor', 'gori', 'orit', 'rith', 'ithm'])
+# print(solution(['example', 7]))         # == ['example'])
+# print(solution(['short', 10]))              # == [])
