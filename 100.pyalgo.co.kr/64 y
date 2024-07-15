@@ -1,0 +1,24 @@
+def solution(data):
+
+    pattern = data[-1]
+    pattern_len = len(pattern)
+    word = data[0]
+    word_turn = 0
+    count = 0
+
+    for wordf in word:
+        if wordf == pattern[0]:
+            if word[word_turn:word_turn + pattern_len] == pattern:
+                count += 1
+        word_turn += 1
+
+    answer = count
+
+    return answer
+
+print(solution(['hellohellohello', 'hello']))# == 3)
+print(solution(['ababab', 'ab']))# == 3)
+print(solution(['abcde', 'f']))# == 0)
+print(solution(['mississippi', 'issi']))# == 2)
+print(solution(['aaaaa', 'aa']))# == 4)
+print(solution(['testtesttest', 'testtest']))# == 2)
