@@ -1,0 +1,18 @@
+def solution(data):
+
+    word = []
+    condition = data[-1]
+    turn = 0
+
+    for dataf in (data[0]):
+        word.append(dataf)
+
+    if condition > 0:
+        while condition > turn:
+            pop_word = word.pop()
+            word.insert(0, pop_word)
+            turn += 1
+
+    answer = ''.join(word)
+
+    return answer
