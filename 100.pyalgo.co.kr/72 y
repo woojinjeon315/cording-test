@@ -1,0 +1,33 @@
+def solution(data):
+
+    word1 = data[0]
+    word2 = data[1]
+
+    word1_list = []
+    word2_list = []
+    answer = []
+
+    for word1f in word1:
+        word1_list.append(word1f)
+
+    # for word2f in word2:
+    #     # word2_list.append(word2f)
+
+    # for word1_listf in word1_list:
+    #     if word1_listf in word2:
+    #         answer.append(word1_listf)
+
+    for word2f in word2:
+        if word2f in word1_list:
+            answer.append(word2f)
+
+    result = sorted(answer)
+    
+    return result
+
+
+print(solution(['apple', 'plead']))   # == ['a', 'e', 'l', 'p'])
+print(solution(['hello', 'world']))   # == ['l', 'o'])
+print(solution(['python', 'java']))   # == [])
+print(solution(['algorithm', 'logarithm']))   # == ['a', 'g', 'h', 'i', 'l', 'm', 'o', 'r', 't'])
+print(solution(['friend', 'fire']))   # == ['e', 'f', 'i', 'r'])
