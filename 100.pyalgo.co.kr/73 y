@@ -1,0 +1,23 @@
+def solution(data):
+
+    word = data[0]
+    word_list = []
+    condition = data[-1]
+    condition_list = []
+
+    for conditionf in condition:
+        condition_list.append(conditionf)
+
+    for wordf in word:
+        if not(wordf in condition_list):
+            word_list.append(wordf)
+
+    answer = sorted(list(set(word_list)))
+
+    return answer
+
+print(solution(['apple', 'ple']))   # == ['a'])
+print(solution(['hello', 'world']))   # == ['e', 'h'])
+print(solution(['python', 'on']))   # == ['h', 'p', 't', 'y'])
+print(solution(['character', 'char']))   # == ['e', 't'])
+print(solution(['example', 'amp']))   # == ['e', 'l', 'x'])
