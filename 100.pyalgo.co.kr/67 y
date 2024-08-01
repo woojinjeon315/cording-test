@@ -1,0 +1,18 @@
+def solution(data):
+
+    turn = 0
+    word = data[0]
+    condition = data[-1]
+    answer = []
+
+    while len(word) > turn:
+        if word[turn] == condition[0]:
+            if word[turn:turn + len(condition)] == condition:
+                answer.append(turn)
+        turn += 1
+
+    return answer
+
+print(solution(('this is a test string', 'is')))   #  == [2, 5])
+print(solution(('repeat repeat repeat', 'peat')))   # == [2, 9, 16])
+print(solution(('find the substring in the string', 'the')))   #  == [5, 22])
