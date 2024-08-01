@@ -1,0 +1,36 @@
+def solution(data):
+
+
+    variable_1 = []
+    variable_2 = []
+    variable_1_len = len(list(data[0]))
+    turn = 0
+    number_count = 0
+
+
+    variable_1 = list(data[0])
+
+
+    while turn < variable_1_len:
+        if variable_1_len - 1 > turn and variable_1[turn] == variable_1[turn + 1]:
+            number_count += 1
+
+
+        else :
+            number_count += 1
+            number_count = str(number_count)
+            variable_2.append(variable_1[turn])
+            variable_2.append(number_count)
+            number_count = int(number_count)
+            number_count = 0
+        turn += 1
+
+    answer = ''.join(variable_2)
+    return answer
+
+
+print(solution(['aaabbccccdaa']))# == a3b2c4d1a2)
+print(solution(['abcd']))# == a1b1c1d1)
+print(solution(['eeeeeee']))# == e7)
+print(solution(['wwwwwwwwiiiiinnnnnnn']))# == w8i5n7)
+print(solution(['x']))# == x1)
