@@ -1,0 +1,34 @@
+def solution(data):
+
+    word = data[0]
+    word_list = []
+    condition = data[-1]
+    condition_list = []
+    answer = []
+
+    for wordf in word:
+        word_list.append(wordf)
+        answer.append(wordf)
+
+    for conditionf in condition:
+        condition_list.append(conditionf)
+        answer.append(conditionf)
+
+    word_list_set = list(set(word_list))
+    condition_list_set = list(set(condition_list))
+    answer_list_set = list(set(answer))
+
+
+    for word_list_setf in word_list_set:
+        if word_list_setf in condition_list_set:
+            answer_list_set.remove(word_list_setf)
+
+    answer_list_set_sorted = sorted(answer_list_set)
+    return answer_list_set_sorted
+
+
+print(solution(['apple', 'peer']))# == ['a', 'l', 'r'])
+print(solution(['hello', 'world']))# == ['d', 'e', 'h', 'r', 'w'])
+print(solution(['python', 'java']))# == ['a', 'h', 'j', 'n', 'o', 'p', 't', 'v', 'y'])
+print(solution(['algorithm', 'logarithm']))# == [])
+print(solution(['house', 'home']))# == ['m', 's', 'u'])
