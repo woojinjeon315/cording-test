@@ -1,0 +1,21 @@
+def solution(data):
+
+
+    line = data[0]
+    dot = data[-1]
+
+
+    if line[0] <= dot <= line[-1]:
+        answer = True
+    else:
+        answer = False
+
+
+    return answer
+
+
+print(solution([[1, 5], 3]))# == True)
+print(solution([[2, 8], 1]))# == False)
+print(solution([[10, 20], 15]))# == True)
+print(solution([[0, 6], 6]))# == True)
+print(solution([[7, 14], 0]))# == False)
