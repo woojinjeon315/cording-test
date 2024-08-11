@@ -1,0 +1,30 @@
+def solution(data):
+
+
+    data_list1 = data[0]
+    data_list2 = data[-1]
+    turn = 0
+
+
+    data_list1.extend(data_list2)
+
+
+    while turn < len(data_list1):
+        if turn + 1 < len(data_list1):
+            if data_list1[turn] > data_list1[turn + 1]:
+                data_list1.append(data_list1.pop(turn))
+                turn = -1
+        turn += 1
+
+
+    answer = data_list1
+
+    
+    return answer
+
+
+print(solution([[1, 3, 5, 7], [2, 4, 6, 8]]))# == [1, 2, 3, 4, 5, 6, 7, 8])
+print(solution([[10, 20, 30], [15, 25, 35]]))# == [10, 15, 20, 25, 30, 35])
+print(solution([[-5, 0, 5], [-6, -4, -2, 0, 2, 4]]))# == [-6, -5, -4, -2, 0, 0, 2, 4, 5])
+print(solution([[3, 6, 9], [2, 4, 8]]))# == [2, 3, 4, 6, 8, 9])
+print(solution([[100, 200, 300], [150, 250, 350]]))# == [100, 150, 200, 250, 300, 350])
