@@ -1,0 +1,38 @@
+def solution(data):
+
+
+    line_dot = []
+    number = 0
+    turn = 0
+    stack = []
+
+
+    while turn + 1 <= len(data):
+        number = 0
+        number += data[turn][0]
+        while data[turn][-1] >= number:
+            line_dot.append(number)
+            number += 1
+        turn += 1
+
+
+    for line_dotf in line_dot:
+        if line_dot.count(line_dotf) >= 3:
+            stack.append(line_dotf)
+
+
+    stack_set = set(stack)
+    answer = len(stack_set) - 1
+
+
+    if answer < 0:
+        answer = 0
+
+
+    return answer
+
+
+print(solution([[1, 5], [3, 7], [2, 6]]))# == 4)
+print(solution([[0, 1], [1, 6], [3, 4]]))# == 1)
+print(solution([[10, 15], [12, 20], [14, 18]]))# == 6)
+print(solution([[5, 10], [8, 12], [9, 11]]))# == 3)
