@@ -1,0 +1,26 @@
+def solution(data):
+
+
+    data_len = len(data)
+
+
+    if data_len % 2 == 0:
+        turn_mid = (data_len / 2)
+    else:
+        turn_mid = (data_len - 1) / 2
+
+
+    turn_mid_int = int(turn_mid)
+
+
+    answer = data[turn_mid_int]
+
+
+    return answer
+
+
+print(solution([1, 2, 3, 4, 5]))#  == 3)
+print(solution([1, 2, 3, 4]))#  == 3)
+print(solution([7, 10, 13]))#  == 10)
+print(solution([100]))#  == 100)
+print(solution([-5, 0, 5, 10, 15, 20]))#  == 10)
