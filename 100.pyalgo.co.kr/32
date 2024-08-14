@@ -9,6 +9,7 @@ def solution(data):
         datafb=bin(dataf)[2:]
         # print(datafb)
         data2.append(datafb)
+
     return(data2)
 
 
