@@ -1,0 +1,35 @@
+def solution(data):
+
+    
+    size = data['size']
+    commands = data['commands']
+    Q = []
+    answer = []
+
+
+    for commandsf in commands:
+        if commandsf[:-2] == 'insert':
+            Q.append(commandsf[-1])
+            answer.append(None)
+            if len(Q) > size:
+                Q.pop(0)
+
+        
+        elif commandsf[:-2] == 'search':
+            if commandsf[-1] in Q:
+                answer.append(True)
+            else:
+                answer.append(False)
+
+
+        elif commandsf == 'delete':
+                Q.pop(0)
+                answer.append(None)
+
+
+    return answer
+
+
+print(solution({'size': 3, 'commands': ['insert 1', 'insert 2', 'insert 3', 'insert 4', 'search 3', 'delete', 'search 3']}))# == [None, None, None, None, True, None, True])
+print(solution({'size': 2, 'commands': ['insert A', 'insert B', 'insert C', 'search B']}))# == [None, None, None, True])
+print(solution({'size': 4, 'commands': ['insert X', 'delete', 'search X']}))# == [None, None, False])
