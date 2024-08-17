@@ -1,0 +1,22 @@
+def solution(data):
+
+
+    a = data[2] ** 2
+    b = data[0] ** 2
+    c = data[1] ** 2
+
+
+    if a == b + c:
+        answer = True
+    else:
+        answer = False
+
+
+    return answer
+
+
+print(solution((3, 4, 5)))# == True)
+print(solution((5, 12, 13)))# == True)
+print(solution((6, 8, 10)))# == True)
+print(solution((7, 24, 25)))# == True)
+print(solution((8, 15, 17)))# == True)
