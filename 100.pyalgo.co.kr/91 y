@@ -1,0 +1,29 @@
+def solution(data):
+
+
+    data_list = []
+    number = 1
+    turn = 0
+
+
+    while turn < data:
+        turn += 1
+        data_list.append(turn)
+
+
+    for data_listf in data_list:
+        number *= data_listf
+
+
+    return number
+
+
+print(solution(0))# == 1)
+print(solution(1))# == 1)
+print(solution(5))# == 120)
+print(solution(7))# == 5040)
+print(solution(10))# == 3628800)
+print(solution(12))# == 479001600)
+print(solution(15))# == 1307674368000)
+print(solution(18))# == 6402373705728000)
+print(solution(20))# == 2432902008176640000)
