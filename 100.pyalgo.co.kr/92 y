@@ -1,0 +1,35 @@
+def solution(data):
+
+
+    number = data
+    turn = 0
+    data_list = []
+
+
+    while turn <= number:
+        if turn == 0:
+            data_list.append(0)
+        elif turn == (1 or 2):
+            data_list.append(1)
+        else:
+            data_list.append(data_list[-1] + data_list[-2])
+        turn += 1
+
+
+    answer = data_list[-1]
+
+
+    return answer
+
+
+print(solution(0))# == 0)
+print(solution(1))# == 1)
+print(solution(2))# == 1)
+print(solution(5))# == 5)
+print(solution(7))# == 13)
+print(solution(10))# == 55)
+print(solution(12))# == 144)
+print(solution(15))# == 610)
+print(solution(20))# == 6765)
+print(solution(25))# == 75025)
+print(solution(30))# == 832040)
