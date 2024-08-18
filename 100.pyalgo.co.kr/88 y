@@ -1,0 +1,38 @@
+def solution(data):
+    
+
+    data_str = str(data)
+    turn = 0
+    answer = []
+    Korean_alphabet = ['', '일', '이', '삼', '사', '오', '육', '칠', '팔', '구']
+
+
+    while turn < len(data_str):
+        answer.append(Korean_alphabet[int(data_str[turn])])
+        if len(data_str) - turn == 4:
+            if data_str[turn] != '0':
+                answer.append('천')
+        elif len(data_str) - turn == 3:
+            if data_str[turn] != '0':
+                answer.append('백')     
+        elif len(data_str) - turn == 2:
+            if data_str[turn] != '0':
+                answer.append('십')
+        turn += 1
+
+
+    # if answer[0] == '일':
+    #     answer.pop(0)
+
+
+    answer = ''.join(answer)
+
+
+    return answer
+
+
+print(solution(123))# == 일백이십삼)
+print(solution(45))# == 사십오)
+print(solution(1001))# == 일천일)
+print(solution(2020))# == 이천이십)
+print(solution(100))# == 일백)
