@@ -1,0 +1,32 @@
+def solution(data):
+
+
+    count = []
+    data_list = []
+    answer = []
+
+
+    for dataf in data:
+        if not(dataf in data_list):
+            data_list.append(dataf)
+            count.append(data.count(dataf))
+
+
+    data_dict = dict(zip(data_list, count))
+    data_dict = dict(sorted(data_dict.items(), key=lambda x: x[0], reverse=False))
+    data_dict = sorted(data_dict.items(), key=lambda x: x[1], reverse=True)
+
+
+    for data_dictf in data_dict:
+        answer.append(data_dictf[0])
+    answer_join = ''.join(answer)
+
+
+    return answer_join
+
+
+    
+print(solution("aabbccdd"))# == abcd)
+print(solution("banana"))# == anb)
+print(solution("mississippi"))# == ispm)
+print(solution("frequency"))# == ecfnqruy)
