@@ -1,0 +1,39 @@
+def solution(data):
+
+    turn = 0
+
+    data_sorted = sorted(data)
+    # print(data_sorted)
+
+    # for dataf in data_sorted:
+    #     if dataf >= 10:
+
+    # while turn > len(data_sorted)
+    #     if data_sorted[turn] >= 10:
+
+
+    #     turn += 1
+
+    data_keys = data
+    data_values = []
+
+    for dataf in data:
+        if dataf >= 10:
+            while dataf >= 10:
+                dataf = dataf / 10
+
+        data_values.append(dataf)
+
+    # print(data_values)
+    data_dict = dict(zip(data_keys, data_values))
+    # print(data_dict)
+    # data_dict.keys()
+    data_dict_sorted = sorted(data_dict.values())
+    print(data_dict_sorted)
+
+print(solution([3, 30, 34, 5, 9]))# == 9534330)
+print(solution([10, 2]))# == 210)
+# print(solution([1, 11, 111]))# == 111111)
+print(solution([0, 0, 0, 0]))# == 0)
+print(solution([12, 121]))# == 12121)
+print(solution([90, 908, 89, 9]))# == 99090889)
