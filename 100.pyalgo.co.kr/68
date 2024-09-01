@@ -37,3 +37,31 @@ print(solution([10, 2]))# == 210)
 print(solution([0, 0, 0, 0]))# == 0)
 print(solution([12, 121]))# == 12121)
 print(solution([90, 908, 89, 9]))# == 99090889)
+
+def solution(data):
+
+    turn = 0
+    data_list = []
+    key_list = []
+    value_list = []
+
+
+    for dataf in data:
+        key_list.append(dataf)        
+        if dataf != 0:
+            while dataf <= 100:
+                dataf = dataf * 10
+        value_list.append(dataf)
+
+    data_dict = dict(zip(key_list, value_list))
+    # sorted_data = sorted(data_list, reverse = True)
+
+    print(data_dict)
+
+
+print(solution([3, 30, 34, 5, 9]))# == 9534330)
+print(solution([10, 2]))# == 210)
+print(solution([1, 11, 111]))# == 111111)
+print(solution([0, 0, 0, 0]))# == 0)
+print(solution([12, 121]))# == 12121)
+print(solution([90, 908, 89, 9]))# == 99090889)
