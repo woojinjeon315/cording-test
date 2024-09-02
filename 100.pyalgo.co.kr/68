@@ -65,3 +65,34 @@ print(solution([1, 11, 111]))# == 111111)
 print(solution([0, 0, 0, 0]))# == 0)
 print(solution([12, 121]))# == 12121)
 print(solution([90, 908, 89, 9]))# == 99090889)
+
+
+def solution(data):
+
+    data_list = [[], [], [], [], [], [], [], [], [], []]
+    turn = 0
+
+
+    for dataf in data:
+        if dataf != 0:
+            if dataf >= 100:
+                while dataf <= 100:
+                    datafX100 = dataf / 10
+            if dataf < 10:
+                while dataf >= 10:
+                    datafX10 = dataf * 10
+        
+        while turn < 10:
+            if (turn <= datafX10) and (datafX10 < turn + 1):
+                    data_list[turn].append(dataf)
+            turn += 1
+        turn = 0
+
+        return data_list
+
+print(solution([3, 30, 34, 5, 9]))# == 9534330)
+print(solution([10, 2]))# == 210)
+print(solution([1, 11, 111]))# == 111111)
+print(solution([0, 0, 0, 0]))# == 0)
+print(solution([12, 121]))# == 12121)
+print(solution([90, 908, 89, 9]))# == 99090889)
