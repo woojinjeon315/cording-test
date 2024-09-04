@@ -1,0 +1,17 @@
+class solution:
+
+    def __init__(self, name, start_time, end_time):
+        self.name = name = data[:7]
+        self.start_time = start_time = data[8:-5]
+        self.end_time = end_time = data[-5:]
+
+
+
+    def end_time_first(self):
+        end_time = sorted(data[-5:])
+        return end_time
+    
+
+print(solution(['Flight A,07:00,09:30', 'Flight B,06:30,09:00', 'Flight C,07:30,10:00']))# == Flight B)
+print(solution(['Flight D,08:00,10:00', 'Flight E,08:30,10:30', 'Flight F,07:45,10:15']))# == Flight D)
+print(solution(['Flight G,09:00,11:00', 'Flight H,09:30,11:30', 'Flight I,08:00,10:00']))# == Flight I)
