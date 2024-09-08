@@ -7,7 +7,7 @@ def solution(data):
 
         width = data[0]
         length = data[1]
-        box = list(data[3])
+        box = data[3]
         box_1_list = []
         width_turn = 0
         length_turn = 0
@@ -23,7 +23,7 @@ def solution(data):
 
 
         return  box_1_list
-        
+
 
     s1_return = s1(data)
 
@@ -35,6 +35,7 @@ def solution(data):
         nextday_box_1_list = []
         width = data[0]
         length = data[1]
+        
 
         for box_1_listf in box_1_list:
             if box_1_listf[0] +1 <= width:
@@ -50,31 +51,50 @@ def solution(data):
                 place = (box_1_listf[0], box_1_listf[1] -1)
                 nextday_box_1_list.append(place)
 
+
         nextday_box_1_list.extend(box_1_list)
 
 
-        return nextday_box_1_list
+        return list(nextday_box_1_list)
 
-    aaa = s2(data)
+    s2_return = s2(data)
 
 
     print(s2(data))
-    print(s2(aaa))
+        # print(s2(aaa))
 
+    def s3(data):
+
+        box_1_list = s2_return
+        box = data[3]
+
+        for box_1_listf in box_1_list:
+            if box[box_1_listf[1]][box_1_listf[0]] == 0:
+                print(box[box_1_listf[1]][box_1_listf[0]])
+                print(box_1_listf[1],box_1_listf[0])
+                box.pop(box[box_1_listf[1]][box_1_listf[0]])
+                box.insert(box[box_1_listf[1]][box_1_listf[0]], 1)
+
+                
+
+
+        return box
+    # print(s3(data)
 
 
 
     # print(s1(data))
     # print(s2(data))
+    print(s3(data))
 
 
-    
+
 
     # for boxf in box:
     #     for boxff in boxf:
     #         if boxff == 0:
     #             count += 1
-    
+
 
     # return count
 
