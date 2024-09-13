@@ -102,3 +102,99 @@ def solution(data):
 # print(solution([5, 5, 3, [[1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]]))# == 7)
 # print(solution([7, 5, 4, [[0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 1, 0], [0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]]))# == 2)
 print(solution([4, 3, 2, [[0, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0]]]))# == 5)
+
+def solution(data):
+
+
+    width = data[0]
+    length = data[1]
+    day = data[2]
+    box = data[3]
+
+    # n = 가로 m = 세로 k 일
+
+    def s1(data):
+
+
+        # width = data[0]
+        # length = data[1]
+        # box = data[3]
+        box_1_list = []
+        width_turn = 0
+        length_turn = 0
+
+
+        while length_turn < length:
+            while width_turn < width:
+                if box[length_turn][width_turn] == 1:
+                    box_1_list.append((width_turn, length_turn))
+                width_turn += 1
+            width_turn = 0
+            length_turn += 1
+
+
+        return  box_1_list
+
+
+    s1_return = s1(data)
+
+
+    def s2(data):
+
+
+        # box_1_list = [(1, 1)]
+        box_1_list = s1_return
+        box_1_list2 = []
+        # width = data[0]
+        # length = data[1]
+        # day = data[2]
+        day_turn = 0
+        
+
+        while  day_turn < day:
+            for box_1_listf in box_1_list:
+                if box_1_listf[0] +1 < width:
+                    place = (box_1_listf[0] +1, box_1_listf[1])
+                    box_1_list2.append(place)
+                if box_1_listf[0] -1 >= 0:
+                    place = (box_1_listf[0] -1, box_1_listf[1])
+                    box_1_list2.append(place)
+                if box_1_listf[1] +1 < length:
+                    place = (box_1_listf[0], box_1_listf[1] +1)
+                    box_1_list2.append(place)
+                if box_1_listf[1] -1 >= 0:
+                    place = (box_1_listf[0], box_1_listf[1] -1)
+                    box_1_list2.append(place)
+
+            box_1_list.extend(box_1_list2)
+            box_1_list2 = []
+            day_turn += 1
+            print(day_turn)
+
+
+        return list(set(box_1_list))
+
+    s2_return = s2(data)
+
+    def s3(data):
+
+
+        box_1_list = s2_return
+
+
+        width * length - len(box_1_list)
+
+
+        return width * length - len(box_1_list)
+
+
+    s3_return = s3(data)
+
+
+    return s3_return
+
+
+
+# print(solution([5, 5, 3, [[1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]]))# == 7)
+# print(solution([7, 5, 4, [[0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 1, 0], [0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]]))# == 2)
+print(solution([4, 3, 2, [[0, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0]]]))# == 5)
