@@ -218,3 +218,23 @@ def s1(data):
 
 
 print(s1([4, 3, 2, [[0, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0]]]))# == 5)
+
+def s1(data):
+
+
+    width = data[0]
+    length = data[1]
+    day = data[2]
+    box = data[3]
+
+
+    for boxf in box:
+        if 1 in boxf:
+            print(boxf.index(1))
+        # print(boxf)
+
+    # return count
+
+
+
+print(s1([4, 3, 2, [[0, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0]]]))# == 5)
