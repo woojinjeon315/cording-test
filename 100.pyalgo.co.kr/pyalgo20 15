@@ -218,22 +218,40 @@ def s1(data):
 
 
 print(s1([4, 3, 2, [[0, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0]]]))# == 5)
-
 def s1(data):
-
 
     width = data[0]
     length = data[1]
     day = data[2]
     box = data[3]
 
+    day_turn = 0
+    # box_1_list = []
+    width_turn = 0
+    length_turn = 0
 
-    for boxf in box:
-        if 1 in boxf:
-            print(boxf.index(1))
-        # print(boxf)
+    while day_turn < day:
+        while length_turn < length:
+            while width_turn < width:
+                if box[length_turn][width_turn] != 0:
+                    if length_turn + 1 < length:
+                        box[length_turn].pop(width_turn)
+                    if width_turn + 1 < width:
+                        box[length_turn].pop(width_turn)
+                        
+                    if length_turn - 1 >= 0:
+                        box[length_turn].pop(width_turn)
 
-    # return count
+                    if width_turn - 1 >= 0:
+                        # box[length_turn].pop(width_turn)
+                        print('aaa')
+
+                width_turn += 1
+            width_turn = 0
+            length_turn += 1
+        day_turn += 1
+
+    # return  box_1_list
 
 
 
