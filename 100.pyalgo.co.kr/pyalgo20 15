@@ -238,10 +238,8 @@ def s1(data):
                         box[length_turn].pop(width_turn)
                     if width_turn + 1 < width:
                         box[length_turn].pop(width_turn)
-                        
                     if length_turn - 1 >= 0:
                         box[length_turn].pop(width_turn)
-
                     if width_turn - 1 >= 0:
                         # box[length_turn].pop(width_turn)
                         print('aaa')
