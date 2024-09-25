@@ -1,0 +1,25 @@
+def solution(data):
+
+
+    turn = 0
+    number = 0
+
+
+    while turn < len(data):
+        if (data[turn] == 'r') or (data[turn] == 'e') or (data[turn] == 'v'):
+            if data[turn + 1].isdigit():
+                number += int(data[turn + 1])
+        turn += 1
+
+
+    number = str(number)
+    answer = (f'{number[0]}월 {number[1]}일')
+
+
+    return answer
+
+
+print(solution('adr10bb1d9ia10e33b7u88k3j1a3v11v9'))# == 2월 3일)
+print(solution('r1rr2rrr3rrrrr4rrrrrre5'))# == 1월 5일)
+print(solution('12345r12345e90v90r90'))# == 2월 8일)
+print(solution('a10b9r1ce33uab8wc918v2cv11v9'))# == 16일)
