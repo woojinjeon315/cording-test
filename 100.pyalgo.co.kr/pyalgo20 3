@@ -1,0 +1,27 @@
+def solution(data):
+
+
+    member_list = []
+    stat_sum_list = []
+
+
+    for dataf in data:
+        member_list.append(dataf[0])
+        stat_sum = (sum(dataf[1:]))
+        stat_sum_list.append(stat_sum)
+
+
+    stat_sum_list2 = stat_sum_list.copy()
+    stat_sum_list2.sort(reverse=True)
+    # print(stat_sum_list2[0:3])
+
+    a = (len(data) * (3/10))
+
+    # print(member_list)
+    # print(stat_sum_list)
+    print(a)
+
+
+print(solution([['A', 25, 24, 11, 12], ['B', 13, 22, 16, 14], ['C', 12, 22, 16, 14], ['D', 13, 22, 16, 14], ['E', 12, 25, 16, 19], ['F', 23, 15, 16, 14], ['G', 13, 14, 3, 5], ['H', 25, 22, 11, 14], ['I', 13, 12, 14, 23], ['J', 13, 22, 15, 14]]))# == ['H', 'E', 'A'])
+print(solution([['A', 11, 23, 17, 15], ['B', 15, 22, 17, 22], ['C', 13, 22, 16, 14], ['D', 18, 22, 16, 25], ['E', 8, 13, 23, 21]]))# == ['D'])
+print(solution([['A', 25, 25, 25, 25], ['B', 25, 25, 25, 25], ['C', 25, 25, 25, 25], ['J', 13, 22, 16, 14]]))# == [])
